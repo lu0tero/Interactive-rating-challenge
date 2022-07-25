@@ -1,7 +1,165 @@
+/* Google fonts */
+/* 'Overpass' */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 24%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --vDarkBlue: hsl(216, 12%, 8%) ;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--vDarkBlue);
+    font-size: 15px;
+}
+
+
+/* Rating state */
+
+.rating-state, .thankyou-state {
+    background-color: var(--darkBlue);
+    width: 327px;
+    height: 364px;
+    border-radius: 16px;
+    margin: 195px auto 80px;
+    padding: 24px;
+}
+
+
+.icon-container, .rating-number {
+    background-color: var(--mediumGrey);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-bottom: 22px;
+    color: var(--lightGrey);
+    border: none;
+}
+
+.rating-state-title, .thankyou-state-title {
+    color: var(--white);
+    margin-bottom: 22px;
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+.rating-state-p, .thankyou-state-p {
+    color: var(--lightGrey);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.number-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-number:hover {
+    background-color: var(--lightGrey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.rating-number:focus {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.submit-button {
+    width: 100%;
+    height: 44px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.submit-button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+/* Thank you state */
+
+.thankyou-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thankyou-img {
+    width: 150px;
+    margin-bottom: 24px;
+}
+
+.thankyou-result {
+    background-color: var(--mediumGrey);
+    width: 170px;
+    height: 36px;
+    border-radius: 50px;
+    color: var(--orange);
+    text-align: center;
+    padding: 8px 0;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.thankyou-state-p {
+    text-align: center;
+}
+
+/* Footer */
+
 .attribution { 
-    font-size: 11px; text-align: center;
+    font-size: 14px; 
+    text-align: center;
+    color: var(--white);
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+
+/* Desktop version */
+
+@media (min-width: 600px) {
+    .rating-state, .thankyou-state {
+        width: 412px;
+        height: 412px;
+        padding: 34px;
+    }
+
+    .icon-container, .rating-number {
+        width: 50px;
+        height: 50px;
+    }
+
+    .rating-state-title, .thankyou-state-title {
+        font-size: 1.9em;
+    }
+
+    .rating-state-p, .thankyou-state-p {
+        font-size: 1.07em;
+    }
+
+    .thankyou-result {
+        font-size: 1em;
+        width: 196px;
+    }
 }
